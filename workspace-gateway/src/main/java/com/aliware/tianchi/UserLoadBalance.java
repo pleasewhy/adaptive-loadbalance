@@ -18,15 +18,15 @@ import java.util.concurrent.ThreadLocalRandom;
  * 选手需要基于此类实现自己的负载均衡算法
  */
 public class UserLoadBalance implements LoadBalance {
-
+ 	private int count = 0;
     @Override
     public <T> Invoker<T> select(List<Invoker<T>> invokers, URL url, Invocation invocation) throws RpcException {
-        int tmp = ThreadLocalRandom.current().nextInt(8);
-        if(tmp < 1)
-        	return invokers.get(0);
-        else if(tmp < 4)
+        int tmp = count++%6;
+        if(tmp==0||tmp==2||tmp==5)
+        	return invokers.get(2);
+        else if(tmp==1||tmp==3)
         	return invokers.get(1);
         else
-        	return invokers.get(2);
+        	return invokers.get(0);
     }
 }
