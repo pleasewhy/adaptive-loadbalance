@@ -19,6 +19,10 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class UserLoadBalance implements LoadBalance {
  	private int count = 0;
+ 	private static final int SMALL = 0;
+ 	private static final int MEDIUM = 1;
+ 	private static final int LARGE = 2;
+
     @Override
     public <T> Invoker<T> select(List<Invoker<T>> invokers, URL url, Invocation invocation) throws RpcException {
         int tmp = count++%6;
