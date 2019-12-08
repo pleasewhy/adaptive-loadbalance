@@ -2,7 +2,6 @@ package com.aliware.tianchi;
 
 import org.apache.dubbo.rpc.listener.CallbackListener;
 import org.apache.dubbo.rpc.service.CallbackService;
-import org.apache.dubbo.config.ProviderConfig;
 
 import java.util.Date;
 import java.util.Map;
@@ -19,8 +18,6 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class CallbackServiceImpl implements CallbackService {
 
-    ProviderConfig providerConfig = new ProviderConfig();
-
     public CallbackServiceImpl() {
         timer.schedule(new TimerTask() {
             @Override
@@ -28,7 +25,7 @@ public class CallbackServiceImpl implements CallbackService {
                 if (!listeners.isEmpty()) {
                     for (Map.Entry<String, CallbackListener> entry : listeners.entrySet()) {
                         try {
-                            entry.getValue().receiveServerMsg(System.getProperty("quota") + " " + providerConfig.getThreads());
+                            entry.getValue().receiveServerMsg(System.getProperty("quota") + " " + new Date().toString());
                         } catch (Throwable t1) {
                             listeners.remove(entry.getKey());
                         }
