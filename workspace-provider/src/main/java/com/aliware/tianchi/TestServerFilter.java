@@ -17,17 +17,17 @@ import org.apache.dubbo.rpc.RpcException;
  */
 @Activate(group = Constants.PROVIDER)
 public class TestServerFilter implements Filter {
-    public static int totalReq = 0;
-    public static int failedReq = 0;
+    // public static int totalReq = 0;
+    // public static int failedReq = 0;
 
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
-        TestServerFilter.totalReq += 1;
+        // TestServerFilter.totalReq += 1;
         try{
             Result result = invoker.invoke(invocation);
             return result;
         }catch (Exception e){
-            TestServerFilter.failedReq += 1;
+            // TestServerFilter.failedReq += 1;
             throw e;
         }
 
