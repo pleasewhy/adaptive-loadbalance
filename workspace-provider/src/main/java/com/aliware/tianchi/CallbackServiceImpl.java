@@ -47,6 +47,6 @@ public class CallbackServiceImpl implements CallbackService {
     @Override
     public void addListener(String key, CallbackListener listener) {
         listeners.put(key, listener);
-        listener.receiveServerMsg(new Date().toString()); // send notification for change
+        listener.receiveServerMsg(String.valueOf(TestServerFilter.getFailCount())); // send notification for change
     }
 }
