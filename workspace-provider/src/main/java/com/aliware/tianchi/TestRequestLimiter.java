@@ -1,8 +1,8 @@
 package com.aliware.tianchi;
 
+import org.apache.dubbo.config.ProviderConfig;
 import org.apache.dubbo.remoting.exchange.Request;
 import org.apache.dubbo.remoting.transport.RequestLimiter;
-
 /**
  * @author daofeng.xjf
  *
@@ -12,6 +12,7 @@ import org.apache.dubbo.remoting.transport.RequestLimiter;
  */
 public class TestRequestLimiter implements RequestLimiter {
 
+    ProviderConfig  providerConfig = new ProviderConfig();
     /**
      * @param request 服务请求
      * @param activeTaskCount 服务端对应线程池的活跃线程数
@@ -20,7 +21,10 @@ public class TestRequestLimiter implements RequestLimiter {
      */
     @Override
     public boolean tryAcquire(Request request, int activeTaskCount) {
-        return true;
+        if (activeTaskCount < providerConfig.getThreads()*0.95){
+            return true;
+        }
+        return false;
     }
 
 }

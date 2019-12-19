@@ -17,15 +17,16 @@ import org.apache.dubbo.rpc.RpcException;
  */
 @Activate(group = Constants.PROVIDER)
 public class TestServerFilter implements Filter {
+    public static int failCount = 0;
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         try{
             Result result = invoker.invoke(invocation);
             return result;
         }catch (Exception e){
+            failCount++;
             throw e;
         }
-
     }
 
     @Override
