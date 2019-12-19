@@ -21,10 +21,7 @@ public class TestRequestLimiter implements RequestLimiter {
      */
     @Override
     public boolean tryAcquire(Request request, int activeTaskCount) {
-        if (activeTaskCount < providerConfig.getThreads()*0.95){
             return true;
-        }
-        return false;
     }
 
 }

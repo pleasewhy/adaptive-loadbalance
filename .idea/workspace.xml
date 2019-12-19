@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b6747f-fc06-4053-806c-a206e9d5f50e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_25_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_20.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-common/workspace-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-common/workspace-common.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/UserLoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/UserLoadBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/workspace-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-gateway/workspace-gateway.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestRequestLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestRequestLimiter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestServerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestServerFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/workspace-provider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/workspace-provider.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +83,7 @@
       <workItem from="1575986842896" duration="664000" />
       <workItem from="1576043112117" duration="6164000" />
       <workItem from="1576069262344" duration="632000" />
-      <workItem from="1576752030808" duration="916000" />
+      <workItem from="1576752030808" duration="2392000" />
     </task>
     <servers />
   </component>
