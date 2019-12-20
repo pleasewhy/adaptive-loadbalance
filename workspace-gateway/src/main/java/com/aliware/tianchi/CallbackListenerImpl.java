@@ -18,6 +18,10 @@ public class CallbackListenerImpl implements CallbackListener {
         receiveCount++;
         if (receiveCount == 3) {
             receiveCount = 0;
+            if(UserLoadBalance.totalCount==0||sum(UserLoadBalance.lastSecondFailRequest)==0){
+                return;
+            }
+
             UserLoadBalance.perCountDiscard =sum(UserLoadBalance.lastSecondFailRequest)/UserLoadBalance.totalCount;
             UserLoadBalance.totalCount = 0;
         }
@@ -25,6 +29,7 @@ public class CallbackListenerImpl implements CallbackListener {
         UserLoadBalance.lastSecondFailRequest.put(t[0], Integer.valueOf(t[1]));
         System.out.println("receive msg from server :" + msg);
     }
+
     private int sum(Map<String,Integer> map){
         int rev = 0;
         for (String i:map.keySet()
