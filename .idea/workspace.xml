@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b6747f-fc06-4053-806c-a206e9d5f50e" name="Default Changelist" comment="1.7">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/CallbackListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/CallbackListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/CallbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/CallbackServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestRequestLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestRequestLimiter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestServerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestServerFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +84,7 @@
       <workItem from="1576069262344" duration="632000" />
       <workItem from="1576752030808" duration="11449000" />
       <workItem from="1576815078968" duration="6718000" />
+      <workItem from="1576827745048" duration="291000" />
     </task>
     <task id="LOCAL-00001" summary="1.7">
       <created>1576813937285</created>

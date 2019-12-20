@@ -17,6 +17,7 @@ import sun.nio.ch.ThreadPool;
 public class TestRequestLimiter implements RequestLimiter {
 
     public ProviderConfig providerConfig = new ProviderConfig();
+    int poolSize = providerConfig.getThreads();
     /**
      * @param request 服务请求
      * @param activeTaskCount 服务端对应线程池的活跃线程数
@@ -30,13 +31,15 @@ public class TestRequestLimiter implements RequestLimiter {
 
     @Override
     public boolean tryAcquire(Request request, int activeTaskCount) {
+        if (activeTaskCount == poolSize) {
+            failCount++;
+        }
         if (System.nanoTime() - lastTimeStamp > 1000) {
             if (failCount == 0 || totalCount == 0) {
-
             } else {
-                perCountDiscard = failCount / totalCount + 10;
                 failCount = 0;
                 totalCount = 0;
+                perCountDiscard = failCount / totalCount + 10;
             }
         }
 
