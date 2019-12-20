@@ -17,29 +17,18 @@ import org.apache.dubbo.rpc.RpcException;
  */
 @Activate(group = Constants.PROVIDER)
 public class TestServerFilter implements Filter {
-    public static int failCount = 0;
-    public static int totalCount = 0;
-
-    public static int getFailCount() {
-        return failCount;
-    }
-
-    public static void setFailCount(int failCount) {
-        TestServerFilter.failCount = failCount;
-    }
-
-
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         try{
             Result result = invoker.invoke(invocation);
-            if(result.getException()!=null){
-                System.out.println(result.getException().getStackTrace());
+            if (result.getException() != null) {
+                System.out.println(result.getException());
             }
             return result;
         }catch (Exception e){
             throw e;
         }
+
     }
 
     @Override
