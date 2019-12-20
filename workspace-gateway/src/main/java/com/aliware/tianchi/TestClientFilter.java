@@ -23,6 +23,7 @@ public class TestClientFilter implements Filter {
             Result result = invoker.invoke(invocation);
             return result;
         }catch (Exception e){
+            System.out.println("false");
             throw e;
         }
     }
