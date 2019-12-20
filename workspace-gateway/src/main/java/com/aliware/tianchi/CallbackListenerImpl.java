@@ -26,8 +26,8 @@ public class CallbackListenerImpl implements CallbackListener {
             UserLoadBalance.totalCount = 0;
         }
         String[] t = msg.split(" ");
-        UserLoadBalance.lastSecondFailRequest.put(t[0], Integer.valueOf(t[1]));
         System.out.println("receive msg from server :" + msg);
+        UserLoadBalance.lastSecondFailRequest.put(t[0], Integer.valueOf(t[1]));
     }
 
     private int sum(Map<String,Integer> map){

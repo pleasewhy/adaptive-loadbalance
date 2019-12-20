@@ -4,6 +4,7 @@
     <list default="true" id="37b6747f-fc06-4053-806c-a206e9d5f50e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/CallbackListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/CallbackListenerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/UserLoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/UserLoadBalance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,12 +84,38 @@
       <workItem from="1575986842896" duration="664000" />
       <workItem from="1576043112117" duration="6164000" />
       <workItem from="1576069262344" duration="632000" />
-      <workItem from="1576752030808" duration="10853000" />
+      <workItem from="1576752030808" duration="11449000" />
+      <workItem from="1576815078968" duration="582000" />
     </task>
+    <task id="LOCAL-00001" summary="1.7">
+      <created>1576813937285</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576813937285</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.7" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Inspections" timestamp="1576752377896">
@@ -127,9 +154,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1575986789642" />
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576813892000">
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576815662479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576813892000" />
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576815662479" />
   </component>
 </project>

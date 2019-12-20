@@ -40,7 +40,7 @@ public class UserLoadBalance implements LoadBalance {
     }
     @Override
     public <T> Invoker<T> select(List<Invoker<T>> invokers, URL url, Invocation invocation) throws RpcException {
-        if(totalCount%perCountDiscard == 0){
+        if(perCountDiscard!=-1&&totalCount%perCountDiscard == 0){
             throw new RpcException();
         }
         int tmp = totalCount++%6;
