@@ -15,7 +15,7 @@ public class CallbackListenerImpl implements CallbackListener {
     public static int receiveCount = 0;
     @Override
     public void receiveServerMsg(String msg) {
-        String[] t = msg.split(" ");
+        System.out.println("receive msg from server :" + msg);
 //        receiveCount++;
 //        if (receiveCount == 3) {
 //            receiveCount = 0;
@@ -26,7 +26,7 @@ public class CallbackListenerImpl implements CallbackListener {
 //            UserLoadBalance.perCountDiscard =sum(UserLoadBalance.lastSecondFailRequest)/UserLoadBalance.totalCount;
 //            UserLoadBalance.totalCount = 0;
 //        }
-//        System.out.println("receive msg from server :" + msg);
+//                String[] t = msg.split(" ");
 //        UserLoadBalance.lastSecondFailRequest.put(t[0], Integer.valueOf(t[1]));
     }
 

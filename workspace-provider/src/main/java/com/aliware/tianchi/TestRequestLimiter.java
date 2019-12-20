@@ -9,35 +9,40 @@ import sun.nio.ch.ThreadPool;
 
 /**
  * @author daofeng.xjf
- *
+ * <p>
  * 服务端限流
  * 可选接口
  * 在提交给后端线程池之前的扩展，可以用于服务端控制拒绝请求
  */
 public class TestRequestLimiter implements RequestLimiter {
 
-    public ProviderConfig  providerConfig = new ProviderConfig();
+    public ProviderConfig providerConfig = new ProviderConfig();
     /**
      * @param request 服务请求
      * @param activeTaskCount 服务端对应线程池的活跃线程数
-     * @return  false 不提交给服务端业务线程池直接返回，客户端可以在 Filter 中捕获 RpcException
-     *          true 不限流
+     * @return false 不提交给服务端业务线程池直接返回，客户端可以在 Filter 中捕获 RpcException
+     * true 不限流
      */
     static int totalCount = 0;
     static int failCount = 0;
     static int perCountDiscard = -1;
     long lastTimeStamp = System.currentTimeMillis();
+
     @Override
     public boolean tryAcquire(Request request, int activeTaskCount) {
-        if(System.nanoTime()-lastTimeStamp>1000){
-            perCountDiscard =failCount/totalCount+10;
-            failCount = 0;
-            totalCount = 0;
+        if (System.nanoTime() - lastTimeStamp > 1000) {
+            if (failCount == 0 || totalCount == 0) {
+
+            } else {
+                perCountDiscard = failCount / totalCount + 10;
+                failCount = 0;
+                totalCount = 0;
+            }
         }
 
         lastTimeStamp = System.currentTimeMillis();
-        if(perCountDiscard!=-1&&totalCount%perCountDiscard==0){
-            return false;
+        if (perCountDiscard != -1 && totalCount % perCountDiscard == 0) {
+            System.out.println("false");
         }
         return true;
     }

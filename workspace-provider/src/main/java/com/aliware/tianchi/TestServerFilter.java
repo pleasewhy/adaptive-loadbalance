@@ -33,8 +33,8 @@ public class TestServerFilter implements Filter {
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         try{
             totalCount++;
-            Result result = invoker.invoke(invocation);
             System.out.println(failCount);
+            Result result = invoker.invoke(invocation);
             return result;
         }catch (Exception e){
             TestServerFilter.failCount++;
