@@ -25,7 +25,6 @@ public class TestClientFilter implements Filter {
         }catch (Exception e){
             throw e;
         }
-
     }
 
     @Override

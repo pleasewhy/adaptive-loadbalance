@@ -25,8 +25,7 @@ public class CallbackServiceImpl implements CallbackService {
                 if (!listeners.isEmpty()) {
                     for (Map.Entry<String, CallbackListener> entry : listeners.entrySet()) {
                         try {
-                            entry.getValue().receiveServerMsg(System.getProperty("quota") + " " + TestServerFilter.getFailCount());
-                            TestServerFilter.setFailCount(0);
+                            entry.getValue().receiveServerMsg(System.getProperty("quota")+new Date());
                         } catch (Throwable t1) {
                             listeners.remove(entry.getKey());
                         }
@@ -47,6 +46,6 @@ public class CallbackServiceImpl implements CallbackService {
     @Override
     public void addListener(String key, CallbackListener listener) {
         listeners.put(key, listener);
-        listener.receiveServerMsg(String.valueOf(TestServerFilter.getFailCount())); // send notification for change
+        listener.receiveServerMsg(new Date().toString()); // send notification for change
     }
 }

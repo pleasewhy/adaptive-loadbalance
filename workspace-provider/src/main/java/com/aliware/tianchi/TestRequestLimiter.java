@@ -23,9 +23,23 @@ public class TestRequestLimiter implements RequestLimiter {
      * @return  false 不提交给服务端业务线程池直接返回，客户端可以在 Filter 中捕获 RpcException
      *          true 不限流
      */
+    static int totalCount = 0;
+    static int failCount = 0;
+    static int perCountDiscard = -1;
+    long lastTimeStamp = System.currentTimeMillis();
     @Override
     public boolean tryAcquire(Request request, int activeTaskCount) {
-            return true;
+        if(System.nanoTime()-lastTimeStamp>1000){
+            perCountDiscard =failCount/totalCount+10;
+            failCount = 0;
+            totalCount = 0;
+        }
+
+        lastTimeStamp = System.currentTimeMillis();
+        if(perCountDiscard!=-1&&totalCount%perCountDiscard==0){
+            return false;
+        }
+        return true;
     }
 
 }

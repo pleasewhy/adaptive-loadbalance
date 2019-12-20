@@ -31,27 +31,28 @@ public class UserLoadBalance implements LoadBalance {
         init();
     }
     public void init(){
-        requestCount.put(large, 0);
-        requestCount.put(medium, 0);
-        requestCount.put(small, 0);
-        lastSecondFailRequest.put(large,0);
-        lastSecondFailRequest.put(medium, 0);
-        lastSecondFailRequest.put(small, 0);
+//        requestCount.put(large, 0);
+//        requestCount.put(medium, 0);
+//        requestCount.put(small, 0);
+//        lastSecondFailRequest.put(large,0);
+//        lastSecondFailRequest.put(medium, 0);
+//        lastSecondFailRequest.put(small, 0);
     }
     @Override
     public <T> Invoker<T> select(List<Invoker<T>> invokers, URL url, Invocation invocation) throws RpcException {
-        if(perCountDiscard!=-1&&totalCount%perCountDiscard == 0){
-            throw new RpcException();
-        }
+//        if(perCountDiscard!=-1&&totalCount%perCountDiscard == 0){
+//            throw new RpcException();
+//        }
+
         int tmp = totalCount++%6;
         if(tmp==0||tmp==2||tmp==5) {
-            requestCount.replace(large, requestCount.get(large)+1);
+//            requestCount.replace(large, requestCount.get(large)+1);
             return invokers.get(2);
         } else if(tmp==1||tmp==4) {
-            requestCount.replace(medium,requestCount.get(medium)+1);
+//            requestCount.replace(medium,requestCount.get(medium)+1);
             return invokers.get(1);
         } else {
-            requestCount.replace(small,requestCount.get(small)+1);
+//            requestCount.replace(small,requestCount.get(small)+1);
             return invokers.get(0);
         }
     }

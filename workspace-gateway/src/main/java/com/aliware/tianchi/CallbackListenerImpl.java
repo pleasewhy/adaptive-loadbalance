@@ -15,19 +15,19 @@ public class CallbackListenerImpl implements CallbackListener {
     public static int receiveCount = 0;
     @Override
     public void receiveServerMsg(String msg) {
-        receiveCount++;
-        if (receiveCount == 3) {
-            receiveCount = 0;
-            if(UserLoadBalance.totalCount==0||sum(UserLoadBalance.lastSecondFailRequest)==0){
-                return;
-            }
-
-            UserLoadBalance.perCountDiscard =sum(UserLoadBalance.lastSecondFailRequest)/UserLoadBalance.totalCount;
-            UserLoadBalance.totalCount = 0;
-        }
         String[] t = msg.split(" ");
-        System.out.println("receive msg from server :" + msg);
-        UserLoadBalance.lastSecondFailRequest.put(t[0], Integer.valueOf(t[1]));
+//        receiveCount++;
+//        if (receiveCount == 3) {
+//            receiveCount = 0;
+//            if(UserLoadBalance.totalCount==0||sum(UserLoadBalance.lastSecondFailRequest)==0){
+//                return;
+//            }
+//
+//            UserLoadBalance.perCountDiscard =sum(UserLoadBalance.lastSecondFailRequest)/UserLoadBalance.totalCount;
+//            UserLoadBalance.totalCount = 0;
+//        }
+//        System.out.println("receive msg from server :" + msg);
+//        UserLoadBalance.lastSecondFailRequest.put(t[0], Integer.valueOf(t[1]));
     }
 
     private int sum(Map<String,Integer> map){

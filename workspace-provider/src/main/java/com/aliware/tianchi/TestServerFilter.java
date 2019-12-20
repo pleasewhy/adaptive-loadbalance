@@ -18,6 +18,7 @@ import org.apache.dubbo.rpc.RpcException;
 @Activate(group = Constants.PROVIDER)
 public class TestServerFilter implements Filter {
     public static int failCount = 0;
+    public static int totalCount = 0;
 
     public static int getFailCount() {
         return failCount;
@@ -27,9 +28,11 @@ public class TestServerFilter implements Filter {
         TestServerFilter.failCount = failCount;
     }
 
+
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         try{
+            totalCount++;
             Result result = invoker.invoke(invocation);
             System.out.println(failCount);
             return result;
