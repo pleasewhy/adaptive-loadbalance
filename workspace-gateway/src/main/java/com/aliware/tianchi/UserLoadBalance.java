@@ -23,7 +23,7 @@ public class UserLoadBalance implements LoadBalance {
     @Override
     public <T> Invoker<T> select(List<Invoker<T>> invokers, URL url, Invocation invocation) throws RpcException {
 
-            int tmp = totalCount%6;
+            int tmp = totalCount++%6;
             if (tmp==0||tmp==2||tmp==4){
                 return invokers.get(2);
             }else if (tmp==1||tmp==5){

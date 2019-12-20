@@ -3,26 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="37b6747f-fc06-4053-806c-a206e9d5f50e" name="Default Changelist" comment="1.7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/CallbackListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/CallbackListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/TestClientFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/TestClientFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/UserLoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-gateway/src/main/java/com/aliware/tianchi/UserLoadBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/target/classes/META-INF/services/org.apache.dubbo.rpc.Filter" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/target/classes/META-INF/services/org.apache.dubbo.rpc.cluster.LoadBalance" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/target/classes/META-INF/services/org.apache.dubbo.rpc.listener.CallbackListener" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-gateway/workspace-gateway.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/CallbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/CallbackServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestRequestLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestRequestLimiter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestServerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestServerFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/target/classes/META-INF/services/org.apache.dubbo.remoting.transport.RequestLimiter" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/target/classes/META-INF/services/org.apache.dubbo.rpc.Filter" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/target/classes/META-INF/services/org.apache.dubbo.rpc.service.CallbackService" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspace-provider/workspace-provider.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +87,7 @@
       <workItem from="1576752030808" duration="11449000" />
       <workItem from="1576815078968" duration="6718000" />
       <workItem from="1576827745048" duration="2285000" />
-      <workItem from="1576830803047" duration="1604000" />
+      <workItem from="1576830803047" duration="3083000" />
     </task>
     <task id="LOCAL-00001" summary="1.7">
       <created>1576813937285</created>
@@ -174,10 +156,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1575986789642" />
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576834490461">
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576848226756">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576834490461" />
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576848226756" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1576830348513">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

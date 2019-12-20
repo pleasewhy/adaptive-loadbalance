@@ -7,6 +7,7 @@ import org.apache.dubbo.rpc.Invocation;
 import org.apache.dubbo.rpc.Invoker;
 import org.apache.dubbo.rpc.Result;
 import org.apache.dubbo.rpc.RpcException;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 
 /**
  * @author daofeng.xjf
@@ -21,11 +22,12 @@ public class TestServerFilter implements Filter {
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         try{
             Result result = invoker.invoke(invocation);
-            if (result.getException() != null) {
+            if (result.hasException()) {
                 System.out.println(result.getException());
             }
+            ThreadPoolTaskScheduler threadPoolTaskScheduler = new ThreadPoolTaskScheduler();
             return result;
-        }catch (Exception e){
+        }catch (RpcException e){
             throw e;
         }
 
