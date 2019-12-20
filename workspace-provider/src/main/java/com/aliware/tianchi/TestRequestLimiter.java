@@ -31,22 +31,23 @@ public class TestRequestLimiter implements RequestLimiter {
 
     @Override
     public boolean tryAcquire(Request request, int activeTaskCount) {
-        if (activeTaskCount >= poolSize-5) {
-            failCount++;
-        }
-        if (System.nanoTime() - lastTimeStamp > 1000) {
-            if (failCount == 0 || totalCount == 0) {
-            } else {
-                failCount = 0;
-                totalCount = 0;
-                perCountDiscard = failCount / totalCount + 10;
-            }
-        }
+//        if (activeTaskCount >= poolSize - 5) {
+//            failCount++;
+//        }
 
-        lastTimeStamp = System.currentTimeMillis();
-        if (perCountDiscard != -1 && totalCount % perCountDiscard == 0) {
-            System.out.println("false");
-        }
+//        if (System.nanoTime() - lastTimeStamp > 1000) {
+//            if (failCount == 0 || totalCount == 0) {
+//            } else {
+//                failCount = 0;
+//                totalCount = 0;
+//                perCountDiscard = failCount / totalCount + 10;
+//            }
+//        }
+//
+//        lastTimeStamp = System.currentTimeMillis();
+//        if (perCountDiscard != -1 && totalCount % perCountDiscard == 0) {
+//            System.out.println("false");
+//        }
         return true;
     }
 

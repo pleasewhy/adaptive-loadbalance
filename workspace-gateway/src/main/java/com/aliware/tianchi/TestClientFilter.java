@@ -8,6 +8,8 @@ import org.apache.dubbo.rpc.Invoker;
 import org.apache.dubbo.rpc.Result;
 import org.apache.dubbo.rpc.RpcException;
 
+import java.util.Objects;
+
 /**
  * @author daofeng.xjf
  *
@@ -21,9 +23,11 @@ public class TestClientFilter implements Filter {
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         try{
             Result result = invoker.invoke(invocation);
+            if (result.getException() != null) {
+                System.out.println(result.getException().getStackTrace());
+            }
             return result;
-        }catch (Exception e){
-            System.out.println("false");
+        }catch (RpcException e){
             throw e;
         }
     }
