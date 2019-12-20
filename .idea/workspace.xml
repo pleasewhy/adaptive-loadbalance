@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b6747f-fc06-4053-806c-a206e9d5f50e" name="Default Changelist" comment="1.7">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestRequestLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspace-provider/src/main/java/com/aliware/tianchi/TestRequestLimiter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +85,7 @@
       <workItem from="1576069262344" duration="632000" />
       <workItem from="1576752030808" duration="11449000" />
       <workItem from="1576815078968" duration="6718000" />
-      <workItem from="1576827745048" duration="291000" />
+      <workItem from="1576827745048" duration="1540000" />
     </task>
     <task id="LOCAL-00001" summary="1.7">
       <created>1576813937285</created>
@@ -153,9 +154,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1575986789642" />
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576828150897">
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576829903421">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576828150897" />
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576829903421" />
   </component>
 </project>

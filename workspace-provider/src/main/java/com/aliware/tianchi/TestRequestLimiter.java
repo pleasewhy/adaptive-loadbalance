@@ -31,9 +31,6 @@ public class TestRequestLimiter implements RequestLimiter {
 
     @Override
     public boolean tryAcquire(Request request, int activeTaskCount) {
-        if (activeTaskCount == poolSize) {
-            failCount++;
-        }
         if (System.nanoTime() - lastTimeStamp > 1000) {
             if (failCount == 0 || totalCount == 0) {
             } else {
